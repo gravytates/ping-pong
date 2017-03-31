@@ -12,17 +12,19 @@
     <title>Ping-Pong!</title>
   </head>
   <body>
+    <!-- title and header -->
     <div class="jumbotron">
       <h1><em>Ping-Pong!</em></h1>
       <h2>Enter a number to see a special string of Ping-Pongs divisible by 3 and 5.</h2>
     </div>
     <div id="background"></div>
     <div class="container">
+      <!-- info box with program details -->
       <div class="infoBox">
         <p>Here's the deal:</p>
         <ol>
           <li>
-            <em>Ping-Pong</em> will count up to your number. However:
+            <em>Ping-Pong</em> will count up (or down! hint-hint) to your number. However:
           </li>
           <li>
             All multiples of 3 are changed to "ping".
@@ -34,15 +36,18 @@
             When these multiples align: <em>Ping-Pong!</em>
           </li>
         </ol>
-
       </div>
+      <!-- form title, input and submit button -->
       <form>
         <h3>Have fun!</h3>
-        <input type="text" id="userInput"> <span class="alert">
-          <strong>Please use positive whole numbers.</strong>
+        <input type="text" id="userInput">
+        <!--non-integer alert-->
+        <span class="alert">
+          <strong>Please use whole numbers.</strong>
         </span><br>
         <button type="submit" class="btn btn-info">Ping-Pong!</button>
       </form>
+      <!-- initially hidden result space-->
       <div class="result">
         <button type="click" class="btn btn-danger" id="reload">RELOAD!</button>
         <p>

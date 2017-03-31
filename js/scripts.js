@@ -1,4 +1,6 @@
 // BUSINESS LOGIC
+
+// checks whether input is integer and which positive/negative path to take
 var isNum = function(input) {
   if (input.match(/^\d+$/)){
     return makeArray(input);
@@ -10,6 +12,7 @@ var isNum = function(input) {
 }
 
 // NEGATIVE INTEGERS
+//function to loop data into array
 var negMakeArray = function(end) {
   var negFirstArray = []
   for(i=-1; i >= end; i--){
@@ -17,7 +20,7 @@ var negMakeArray = function(end) {
   }
   return negPingPongHunter(negFirstArray);
 }
-
+// loops through array to replace multiples
 var negPingPongHunter = function(negFirstArray) {
   var negPingPongArray = []
   for(i=0; i <= negFirstArray.length - 1; i++) {
@@ -34,7 +37,7 @@ var negPingPongHunter = function(negFirstArray) {
   }
   return negMakeList(negPingPongArray);
 }
-
+// creates ul and li elements to hold array items
 var negMakeList = function(negPingPongArray) {
   var negList = document.createElement('ul');
   for(var i=0; i < negPingPongArray.length; i++){
@@ -46,6 +49,7 @@ var negMakeList = function(negPingPongArray) {
 }
 
 // POSITIVE INTEGERS
+// function to loop data into array
 var makeArray = function(end) {
   var firstArray = []
   for(i=1; i <= end; i++){
@@ -54,6 +58,7 @@ var makeArray = function(end) {
   return pingPongHunter(firstArray);
 }
 
+// loops through array to replace multiples
 var pingPongHunter = function(firstArray) {
   var pingPongArray = []
   for(i=0; i <= firstArray.length - 1; i++) {
@@ -71,6 +76,7 @@ var pingPongHunter = function(firstArray) {
   return makeList(pingPongArray);
 }
 
+// creates ul and li elements to hold array items
 var makeList = function(pingPongArray) {
   var list = document.createElement('ul');
   for(var i=0; i < pingPongArray.length; i++){
@@ -83,6 +89,8 @@ var makeList = function(pingPongArray) {
 
 // UI LOGIC
 $(function(){
+
+  // function to display results/alert upon submission
   $("form").submit(function(e){
     e.preventDefault();
 
@@ -98,8 +106,10 @@ $(function(){
       }
   });
 
+  // reload button to refresh javascript
   $("#reload").click(function(){
     location.reload();
+    // appends li to result starting at 0 index
     document.getElementById('pingPongResult').appendChild(makeList(pingPongArray[0]));
   });
 });
