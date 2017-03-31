@@ -1,4 +1,9 @@
 // BUSINESS LOGIC
+var isNum = function(input) {
+
+
+}
+
 var makeArray = function(end) {
   var firstArray = []
   for(i=1; i <= end; i++){
@@ -34,15 +39,13 @@ var makeList = function(pingPongArray) {
   return list;
 }
 
-
-
-
-
-
 // UI LOGIC
 $(function(){
   $("form").submit(function(e){
     e.preventDefault();
+
+
+
     $(".result").show();
     $("form").hide();
     var userInput = $("#userInput").val();
