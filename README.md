@@ -1,26 +1,26 @@
 # _Ping Pong!_
 
-#### _Ping Pong number looping project: week 3 code review for epicodus. Site can be viewed in browser at 'https://gravytates.github.io/ping-pong' _
+#### _Ping-Pong number looping project: week 3 code review for epicodus. Site can be viewed in browser at 'https://gravytates.github.io/ping-pong'_
 
 #### By _Grady L Shelton_
 
 ## Description
 
-_This suggestion project asks users to input data into a form. Answers are branched to 5 different results including: Ruby/Rails, C#/.NET, CSS/Design, Java/Android, and advice to not yet enroll. Logic is broken into an if/else statement with one nested if/else if/else if/else sub-statement. User warnings are displayed for incomplete forms using five additional individual if/else statements. Results contain extra info about specific advice/track. Extra addition of a background color changing button that toggles between a scenic photo with dark text and a black background with white text._
+_This Ping-Pong game takes a user's input number and displays it as a list starting from one and ending at the input number. The catch, of course, is that for every multiple of 3, the integer is replaced by "ping", and for every multiple of 5, it is replaced by "pong". For multiples where 3 and 5 collide (aka multiples of 15), instances are replaced by "ping-pong"._
 
 ## Setup/Installation Requirements
 
 * _Ensure internet connection_
 * _Open Terminal_
 * _Change into the desktop directory ('cd desktop')_
-* _Run "git clone  https://github.com/gravytates/track-advice.git_
-* _Open 'track-advice' folder in desktop_
+* _Run "git clone  https://github.com/gravytates/ping-pong.git_
+* _Open 'ping-pong' folder in desktop_
 * _Open 'index.html' file_
 
 _Alternatively_
 
 * _Open web browser (with internet connection)_
-* _Enter into browser 'https://gravytates.github.io/track-advice'_
+* _Enter into browser 'https://gravytates.github.io/ping-pong'_
 
 ## Specifications
 
@@ -42,7 +42,7 @@ _Alternatively_
 
 * _It can prompt users with a message if a non-number is entered_
   * _Example Input: Hi!_
-  * _Example Output: "Please enter an integer"_
+  * _Example Output: "Please use positive whole numbers."_
 
 
 ## Known Bugs
@@ -55,8 +55,8 @@ _Please contact Grady L Shelton at gradyish@gmail.com if you have any questions 
 
 ## Technologies Used
 
-_Webpage is built with HTML, CSS, and javaScript, specifically with the bootstrap.css file/framework, an additional custom css file, and the jQuery3.2.0 files/framework. Grady L Shelton and Epicodus are not liable for anything beyond the portfolio.index.html webpage._
+_Webpage is built with HTML, CSS, and javaScript, specifically with the bootstrap.css file/framework, an additional custom css file, and the jQuery3.2.0 files/framework. JavaScript scripts file uses four functions to take the user input, check if it is a valid number 'isNum', pushes it into a sequential array of numbers ('makeArray') using a for loop, uses another for loop to check for multiples of 3, 5, and 15 and replaces instances with corresponding ping-pong word, and pushes new words with the remaining numbers into a new array. The finished array is then used as the argument for the makeList function where it creates child 'li' elements for every array item, and an 'ul' parent element, so the items are displayed in the html as an unordered list. Grady L Shelton and Epicodus are not liable for anything beyond the portfolio.index.html webpage._
 
 ### License
 
-Copyright (c) 2017 Grady L Shelton. This software is lecensed under the MIT license.
+Copyright (c) 2017 Grady L Shelton. This software is licensed under the MIT license.
