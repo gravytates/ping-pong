@@ -11,8 +11,11 @@ var pingPongHunter = function(firstArray) {
   var pingPongArray = []
   for(i=0; i <= firstArray.length; i++) {
     var newNums = (firstArray[i]);
-    if (firstArray[i] % 3 === 0){
-
+    if (firstArray[i] % 15 === 0){
+      pingPongArray.push("ping-pong");
+    } else if (firstArray[i] % 5 === 0){
+      pingPongArray.push("pong");
+    } else if (firstArray[i] % 3 === 0){
       pingPongArray.push("ping");
     } else {
       pingPongArray.push(newNums);
