@@ -1,7 +1,9 @@
 // BUSINESS LOGIC
 var isNum = function(input) {
-
-
+  if (input.match(/^\d+$/)){
+    return makeArray(input);
+  }
+    return false;
 }
 
 var makeArray = function(end) {
@@ -44,14 +46,18 @@ $(function(){
   $("form").submit(function(e){
     e.preventDefault();
 
-
-
-    $(".result").show();
-    $("form").hide();
     var userInput = $("#userInput").val();
-    var result = makeArray(userInput);
-    $("#pingPongResult").append(result);
+
+    var numCheck = isNum(userInput);
+      if (numCheck === false) {
+        $(".alert").show();
+      } else {
+        $(".result").show();
+        $("form").hide();
+        $("#pingPongResult").append(numCheck);
+      }
   });
+
   $("#reload").click(function(){
     location.reload();
     document.getElementById('pingPongResult').appendChild(makeList(pingPongArray[0]));
