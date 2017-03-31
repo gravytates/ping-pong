@@ -1,4 +1,20 @@
 // BUSINESS LOGIC
+var makeArray = function(end) {
+  firstArray = []
+  for(i=1; i <= end; i++){
+    firstArray.push(i);
+  }
+  return firstArray
+}
+
+// var pingPongArray = function(firstArray)
+
+
+
+
+
+
+
 
 
 
@@ -10,7 +26,7 @@ $(function(){
     $(".result").show();
     $("form").hide();
     var userInput = $("#userInput").val();
-    var result = userInput;
+    var result = makeArray(userInput);
     $("#pingPongResult").append(result);
   });
   $("#reload").click(function(){
