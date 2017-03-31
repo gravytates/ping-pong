@@ -12,6 +12,13 @@
   background-color: rgba(255,255,255,0);
 }
 
+.infoBox {
+  background-color: yellow;
+  color: black;
+  padding: inherit;
+  margin-right: 50%;
+}
+
 body {
   color: white;
 }
