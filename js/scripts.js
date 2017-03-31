@@ -1,6 +1,6 @@
 // BUSINESS LOGIC
 var isNum = function(input) {
-  if (input.match(/^-?\d+?$/)){
+  if (input.match(/^\d+$/)){
     return makeArray(input);
   }
     return false;
@@ -9,13 +9,9 @@ var isNum = function(input) {
 var makeArray = function(end) {
   var firstArray = []
   for(i=1; i <= end; i++){
-    if (input.match(/^\d+$/)) {
     firstArray.push(i);
-    return pingPongHunter(firstArray);
-  } else {
-    firstArray.push(i);
-    return pingPongHunter(firstArray);
   }
+  return pingPongHunter(firstArray);
 }
 
 var pingPongHunter = function(firstArray) {
@@ -26,7 +22,7 @@ var pingPongHunter = function(firstArray) {
       pingPongArray.push("ping-pong!");
     } else if (firstArray[i] % 5 === 0){
       pingPongArray.push("pong");
-    } else if (firstArray[i] % 3 === 0 || firstArray[i] % 3 === -0){
+    } else if (firstArray[i] % 3 === 0){
       pingPongArray.push("ping");
     } else {
       pingPongArray.push(newNums);
