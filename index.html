@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <title>Ping-Pong!</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1><em>Ping-Pong!</em></h1>
+      <h2>Enter a number to see a special string of Ping-Pongs divisible by 3 and 5.</h2>
+    </div>
+    <div class="container">
+      <form>
+        <h3>Enter:</h3>
+        <input type="text" id="userInput"><br>
+        <button type="submit" class="btn btn-info">Submit</button>
+      </form>
+      <div class="result">
+        <ul class="alerts">
+        </ul>
+        <p> Your result is: <span id="pingPongResult"></span></p>
+        <button type="click" class="btn btn-danger" id="reload">RELOAD!</button>
+      </div>
+    </div>
+
+  </body>
+</html>
