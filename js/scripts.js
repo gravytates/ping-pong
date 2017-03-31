@@ -4,12 +4,12 @@ var makeArray = function(end) {
   for(i=1; i <= end; i++){
     firstArray.push(i);
   }
-  return firstArray;
+  return pingPongHunter(firstArray);
 }
 
 var pingPongHunter = function(firstArray) {
   var pingPongArray = []
-  for(i=0; i <= firstArray.length; i++) {
+  for(i=0; i <= firstArray.length - 1; i++) {
     var newNums = (firstArray[i]);
     if (firstArray[i] % 15 === 0){
       pingPongArray.push("ping-pong");
@@ -21,10 +21,18 @@ var pingPongHunter = function(firstArray) {
       pingPongArray.push(newNums);
     }
   }
-  return pingPongArray;
+  return makeList(pingPongArray);
 }
 
-
+var makeList = function(pingPongArray) {
+  var list = document.createElement('ul');
+  for(var i=0; i < pingPongArray.length; i++){
+  var item = document.createElement('li');
+  item.appendChild(document.createTextNode(pingPongArray[i]));
+  list.appendChild(item);
+  }
+  return list;
+}
 
 
 
@@ -38,10 +46,11 @@ $(function(){
     $(".result").show();
     $("form").hide();
     var userInput = $("#userInput").val();
-    var result = pingPongHunter(makeArray(userInput));
+    var result = makeArray(userInput);
     $("#pingPongResult").append(result);
   });
   $("#reload").click(function(){
     location.reload();
+    document.getElementById('pingPongResult').appendChild(makeList(pingPongArray[0]));
   });
 });
